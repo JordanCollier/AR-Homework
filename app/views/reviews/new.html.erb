@@ -1,0 +1,10 @@
+<p><%= form_for [@product, @review] do |f| %></p>
+
+<p><%= f.label :title %>
+<%= f.text_field :title %></br></p>
+<p><%= f.label :description %>
+<%= f.text_field :description %></br></p>
+<p><%= f.label :rating %>
+<%= f.number_field :rating %></br></p>
+<p><%= f.submit %></p>
+<% end %>

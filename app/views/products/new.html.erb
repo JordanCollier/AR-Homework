@@ -1,0 +1,10 @@
+<p><%= form_for [@company, @product] do |f| %></p>
+
+<p><%= f.label :department %>
+<%= f.text_field :department %></br></p>
+<p><%= f.label :name %>
+<%= f.text_field :name %></br></p>
+<p><%= f.label :price %>
+<%= f.number_field :price %></br></p>
+<p><%= f.submit %></p>
+<% end %>

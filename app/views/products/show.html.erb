@@ -1,0 +1,24 @@
+<h1>PRODUCTS</h1>
+<table border="1">
+  <tr>
+    <th> Title </th>
+    <th> Description </th>
+    <th> Rating </th>
+  </tr>
+
+
+  <tbody>
+    <% @product.reviews.each do |review| %>
+    <tr>
+      <td> <%= review.title %></td>
+      <td> <%= review.description %></td>
+      <td> <%= review.rating %></td>
+    </tr>
+    <% end %>
+    
+
+
+  </tbody>
+
+
+</table>

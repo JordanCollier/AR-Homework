@@ -2,13 +2,13 @@ The goal of this exercise is to experiment with a belongs_to and has_many both i
 
 ```
 
-bundle
-rake db:create db:migrate db:seed
-There are Companies, Locations, Reviews, and Products.
+√bundle
+√rake db:create db:migrate db:seed
+√There are Companies, Locations, Reviews, and Products.
 
 ```
 
-The models need to be fixed to make them communicate.
+√The models need to be fixed to make them communicate.
 
 MODELS MODELS MODELS!!!!
 
@@ -28,50 +28,50 @@ For Example:
 set a variable called companies = to all the Companies.
   companies = Company.all
 
-1. set a variable called products = to all the Products ordered by name.
+√1. set a variable called products = to all the Products ordered by name.
+  products = Product.all
 
+√2. set a variable called locations = to all the Locations ordered by street_name.
+  locations = Location.all
 
-2. set a variable called locations = to all the Locations ordered by street_name.
+√3. set a variable called reviews = to all the Reviews ordered by rating.
+  reviews = Review.all
 
+√4. set a variable called company = to the Company with an ID of 10.
+  company = Company.find(10)
 
-3. set a variable called reviews = to all the Reviews ordered by rating.
+√5. select all of the products that belong to that company.
+  company.products
 
+√6. select all of the locations that belong to that company.
+  company.locations
 
-4. set a variable called company = to the Company with an ID of 10.
+√7. select the first product that belongs to that company.
+  company.products.first
 
+√8. select all the reviews that belong to that product.
+  company.products.first.reviews.all
 
-5. select all of the products that belong to that company.
+√9. select all the reviews that belong to the product with id of 1.
+  Product.find(1).reviews.all
 
-
-6. select all of the locations that belong to that company.
-
-
-7. select the first product that belongs to that company.
-
-
-8. select all the reviews that belong to that product.
-
-
-9. select all the reviews that belong to the product with id of 1.
-
-
-10. update each product's rating to 0.
-
+√10. update each product's rating to 0.
+  Product.first.reviews.each {|x| x.rating = 0}
 
 11. select all the reviews with a rating of greater than 5.  Review.where("rating  > 5")
 
 
 12. select all the companies with a start date before 12/12/2012.  Company.where(['start_date < ?', '12/12/2012'])
+            I'll need an explanation Company.where(['start_date < ?', '12/12/2012'])
 
+√13. How many are there?
+  16
 
-13. How many are there?
+√14. select all the products with a price greater than 50. Product.where("? > ?")
+  Product.where("price > 50")
 
-
-14. select all the products with a price greater than 50. Product.where("? > ?")
-
-
-15. select review with id of 10 and return the product it belongs to.
-
+√15. select review with id of 10 and return the product it belongs to.
+  Review.find(10).product
 
 
 
@@ -82,12 +82,12 @@ set a variable called companies = to all the Companies.
 
 ## View Stories
 
-The root page should be 'companies#index'
+√The root page should be 'companies#index'
 
-There are no views setup. Root is set to standard rails page.
+√There are no views setup. Root is set to standard rails page.
 
-Show page for each company.
-Users can create companies.
+√Show page for each company.
+√Users can create companies.
 Users can create locations.
 Users can create products.
 Users can create reviews.
@@ -108,10 +108,10 @@ example rows:
 
 
 
-* The company name should link to the companies show page.
-* Link to Create Product and Create Location. The name should link to a show page for that company.
-* Link to delete a company.
-* Show page for company shows all details of company and shows all it's products and locations in separate tables.
+√* The company name should link to the companies show page.
+√* Link to Create Product and Create Location. The name should link to a show page for that company.
+√* Link to delete a company.
+√* Show page for company shows all details of company and shows all it's products and locations in separate tables.
 * Users can create Locatons/Products/Reviews.
 * A product showpage that contains all of the products reviews.
 

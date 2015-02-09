@@ -1,0 +1,50 @@
+<h1>PRODUCTS</h1>
+<table border="1">
+  <tr>
+    <th> Department </th>
+    <th> Name </th>
+    <th> Price </th>
+  </tr>
+
+
+  <tbody>
+    <% @company.products.each do |product| %>
+    <tr>
+      <td> <%= product.department %></td>
+      <td> <%= link_to product.name, [@company, product] %></td>
+      <td> <%= product.price %></td>
+    </tr>
+    <% end %>
+    <td><%= link_to "Add Product", new_company_product_path(@company) %></td>
+  </tbody></br>
+
+
+</table>
+
+<h1> LOCATIONS</h1>
+<table border="1">
+  <tr>
+    <th> City </th>
+    <th> Street Name </th>
+    <th> State </th>
+    <th> Zip Code </th>
+    <th> Country </th>
+  </tr>
+
+
+  <tbody>
+    <% @company.locations.each do |locations| %>
+    <tr>
+      <td> <%= locations.city %></td>
+      <td> <%= locations.street_name %></td>
+      <td> <%= locations.state %></td>
+      <td> <%= locations.zip_code %></td>
+      <td> <%= locations.country %></td>
+    </tr>
+    <% end %>
+    <td><%= link_to "Add Location", new_company_location_path(@company) %></td>
+  </tbody>
+
+
+</table></br>
+<%= link_to "BACK", companies_path %>
