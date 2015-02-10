@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
 private
 
   def set_product
-    @task = Product.find(params[:id])
+    @product = Product.find(params[:id])
   end
 
   def product_params

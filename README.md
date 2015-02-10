@@ -88,12 +88,12 @@ set a variable called companies = to all the Companies.
 
 √Show page for each company.
 √Users can create companies.
-Users can create locations.
-Users can create products.
-Users can create reviews.
+√Users can create locations.
+√Users can create products.
+√Users can create reviews.
 
 
-Create an index page for companies that lists all companies and attributes in a table, with a link to that companies show page from it's name.
+√Create an index page for companies that lists all companies and attributes in a table, with a link to that companies show page from it's name.
 (Set root to this page)
 
 example rows:
@@ -112,8 +112,8 @@ example rows:
 √* Link to Create Product and Create Location. The name should link to a show page for that company.
 √* Link to delete a company.
 √* Show page for company shows all details of company and shows all it's products and locations in separate tables.
-* Users can create Locatons/Products/Reviews.
-* A product showpage that contains all of the products reviews.
+√* Users can create Locatons/Products/Reviews.
+√* A product showpage that contains all of the products reviews.
 
 
 
